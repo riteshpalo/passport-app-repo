@@ -1,0 +1,17 @@
+server:
+  port: 9999
+  
+#ViewResolver Configuration  
+spring:  mvc:    view:      prefix: /views/
+      suffix: .jsp
+      
+#datasource configuration
+  datasource:    driver-class-name: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:ritesh
+    username: ENV_DEV
+    password: ENV_DEV 
+  jpa:    show-sql: true    hibernate:      ddl-auto: update
+    properties:      hibernate: 
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        format_sql: false
+      
